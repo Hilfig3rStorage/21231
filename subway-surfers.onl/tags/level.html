@@ -1,0 +1,128 @@
+<!DOCTYPE html><html xmlns="https://www.w3.org/1999/xhtml" lang="en-US">
+<!-- Mirrored from subway-surfers.onl/tags/level by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Sep 2022 20:29:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, maximum-scale=5.0, initial-scale=1.0, minimal-ui"/><meta name="msvalidate.01" content="A187B71CE988526C13D0FC2DC3BF4AE7" /><title>Level Games</title><meta name="title" content="Level Games"><meta name="description" content="Play the mosting existing games of Level Games"><meta name="external" content="true"><meta name="keywords" content="level games"><meta http-equiv="content-language" content="en" /><meta name="news_keywords" content="level games"><meta name="distribution" content="Global" /><meta http-equiv="audience" content="General" /><meta name="author" content="Level Games" /><meta property="og:url" content="level.html" /><meta property="og:description" content="Play the mosting existing games of Level Games" /><meta name="resource-type" content="Document" /><meta property="og:image" content="../upload/imgs/options/subvway-surfers-logo.png" /><meta property="og:title" content="Level Games"><meta property="og:site_name" content="Subway Surfers"><link rel="image_src" href="../upload/imgs/options/subvway-surfers-logo.png" /><meta property="og:type" content="article" /><link rel="apple-touch-icon" href="../upload/imgs/options/subvway-surfers-logo.png"/><link rel="canonical" href="level.html" /><link rel="icon" href="../upload/cache/upload/imgs/options/subvway-surfers-logo-c60x60.png"/><link rel="apple-touch-icon" sizes="57x57" href="../upload/cache/upload/imgs/options/subvway-surfers-logo-c57x57.png"><link rel="apple-touch-icon" sizes="72x72" href="../upload/cache/upload/imgs/options/subvway-surfers-logo-c72x72.png"><link rel="apple-touch-icon" sizes="114x114" href="../upload/cache/upload/imgs/options/subvway-logo_01-s20x20.png"><link rel="stylesheet" type="text/css" href="../themes/subwaysurfers/rs/css/font-awesome.css"><link rel="stylesheet" type="text/css" href="../themes/subwaysurfers/rs/css/common.css"><link rel="stylesheet" type="text/css" href="../themes/subwaysurfers/rs/css/main1bce.css?v=6"><script type="text/javascript" src="../themes/subwaysurfers/rs/js/jquery.min.js"></script><link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono&amp;display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1"><script>var domain_url = '../index.html';</script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-84XWJ639NV"></script><script>window.dataLayer = window.dataLayer || [];
+		 function gtag(){dataLayer.push(arguments);}
+		 gtag('js', new Date());
+
+		 gtag('config', 'G-84XWJ639NV');</script><script async src="../../pagead2.googlesyndication.com/pagead/js/febd6.txt?client=ca-pub-2347204794553358"
+ crossorigin="anonymous"></script>	<style>.ab-footer{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}</style></head><script type='text/javascript'>var themeurl = '../themes/subwaysurfers/index.html';
+ function get_format_url(controller, action) {
+ var urlformat = '/:a:.:c:';
+ urlformat = urlformat.replace(':c:', controller);
+ return urlformat.replace(':a:', action);
+ }</script><body><div class="top-header"><div class="container-E"><div class="B"><div class="logo"><a title="Logo" href="../index.html"><img width="205" height="36" alt="Logo" src="../upload/cache/upload/imgs/options/subvway-surfers-logo-m205x36.png"></a></div><div class="top-menu"><a title="Stumble Guys" href="../stumble-guys.html">Stumble Guys</a><a title="Subway Surfers Zurich" href="../subway-surfers-zurich.html">Subway Surfers Zurich</a></div></div></div></div><div class="box-game"><div class="container-E"><br/><div style=" " class="box-TT"><div style=" border-radius: 5px; background: #ff6a00;" class="home"><a title="Home" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i></a></div><div class="names-games"><h1 style="
+ background: #ff6a00;
+">Level Games</h1></div></div><br/><div id="more_games" ></div><p style="width: 100%; text-align: center; padding: 10px; margin: 0" id="bt_more_games"><a style=" padding: 15px; border-radius: 5px;"><img style="width: 68px; overflow: hidden; height: auto; padding-top: 20px" src= "../themes/subwaysurfers/rs/images/bbbb.gif"></a></p><style>#more_games:after{
+ margin: auto;
+ clear: both;
+ content: "";
+ display: block;
+ }</style><script>$(document).ready(function () {
+ //console.log('aaaa');
+
+ var page = 1;
+ var loadmoredata = true;
+ var category_id = '';
+ var keywords = '';
+ var show_icon = '1';
+ var field_order = '';
+ var tag_ids = '406';
+
+ more_games(page);
+// Cuon tu dong
+ $(window).scroll(function () {
+ if ($(window).scrollTop() + 1 >= $(document).height() - $(window).height()) {
+ setTimeout(function(){ more_games(page);}, 1000);
+ }
+ });
+ function binddata() {
+ if ($("body").height() < $(window).height()) {
+
+ setTimeout(function(){ more_games(page);}, 1000);
+
+ }
+ }
+ // Het cuon tu dong
+ // $("#bt_more_games").click(function () {
+ // more_games(page);
+ // }); ko muon click
+
+ var loadingajax = false;
+
+
+ function more_games() {
+ //console.log("more_games");
+ if (!loadmoredata) {
+ return;
+ }
+ if (loadingajax) {
+ return;
+ }
+ loadingajax = true;
+ $.ajax({
+ url: '/moregames.ajax',
+ data: {
+ show_icon:show_icon,
+ page: page,
+ q:keywords,
+ category_id:category_id,
+ field_order:field_order,
+ tag_ids:tag_ids,
+ },
+ type: 'GET',
+ success: function (datahtml) {
+
+ loadingajax = false;
+ var data = JSON.parse(datahtml);
+ $("#more_games").append(data.html);
+ show_icon=0;
+ if (!data.moregame) {
+ $("#bt_more_games").hide();
+ loadmoredata = false;
+
+ }
+ page++;
+ binddata();
+ },
+ error: function (xhr, ajaxOptions, thrownError) {
+
+ }
+ });
+ }
+ });
+
+</script> </div></div><div class="footer ab-footer"><div class="container-E"><div class="flash"><span> Copyright © 2022 Subway Surfers All Rights Reserved.</span></div><div class="lgbottom"><a href="../index.html"><img alt="Logo Subway Surfers" src="../upload/cache/upload/imgs/options/subvway-surfers-logo-m205x36.png"></a></div></div></div><div class="scoll"><style>.scrollup {
+ position: fixed;
+ bottom: 50px;
+ right: 10px;
+ background-color: #fff;
+ padding: 3px 10px;
+ border-radius: 50%;
+ }</style><a style="color: #000" href="#" class="scrollup"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a><script>
+ $(document).ready(function () {
+
+ $(window).scroll(function () {
+ if ($(this).scrollTop() > 100) {
+ $('.scrollup').fadeIn();
+ } else {
+ $('.scrollup').fadeOut();
+ }
+ });
+
+ $('.scrollup').click(function () {
+ $("html, body").animate({
+ scrollTop: 0
+ }, 600);
+ return false;
+ });
+
+ });
+</script></div></body>
+<!-- Mirrored from subway-surfers.onl/tags/level by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Sep 2022 20:29:33 GMT -->
+</html>
